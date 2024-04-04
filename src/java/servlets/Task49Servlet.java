@@ -6,6 +6,7 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,12 +45,11 @@ public class Task49Servlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Task49</h1>");
-            out.println("<h2>Паспортные данные</h2>");
             out.println("<table>");
             
              out.println("<tr>");
              out.println("<th></th>");
-             out.println("<th>Значение</th>");
+             out.println("<th></th>");
              out.println("</tr>");
              
              out.println("<tr>");
@@ -69,8 +69,15 @@ public class Task49Servlet extends HttpServlet {
              
              
              out.println("<tr>");
-             out.println("<td>Фото</td>");
+             out.println("<td></td>");
              out.println("<td>"+"<img src=\""+pic+"\" alt=\"Description\">"+"</td>");
+             out.println("</tr>");
+             
+             
+             out.println("<tr>");
+             out.println("<td>Дата</td>");
+             Date x = java.util.Calendar.getInstance().getTime();
+             out.println("<td>"+x.toString()+"</td>");
              out.println("</tr>");
 
             out.println("</table>");
